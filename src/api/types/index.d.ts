@@ -1,0 +1,8 @@
+export interface IUser {
+  username: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  encrypted_password: string;
+  salt: string;
+}
