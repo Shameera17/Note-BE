@@ -21,8 +21,8 @@ export const securePassword = (
 ) => {
   bcrypt
     .hash(plainText + salt, 10)
-    .then((hash) => {
+    .then((hash: string | undefined) => {
       finalFunc(hash);
     })
-    .catch((error) => finalFunc(undefined, error));
+    .catch((error: string | undefined) => finalFunc(undefined, error));
 };
